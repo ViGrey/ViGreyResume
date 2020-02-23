@@ -2,3 +2,4 @@ bin/*
 build/*
 
 !bin/ViGreyResume.pdf
+!bin/ViGreyResume-boring.pdf

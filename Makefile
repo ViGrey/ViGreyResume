@@ -10,16 +10,18 @@ all:
 	cp -r $(CURRENTDIR)src $(CURRENTDIR)build/$(PKG_NAME); \
 	cd $(CURRENTDIR)build; \
 	zip -r part.zip $(PKG_NAME); \
-	cp -r $(PKG_NAME)/src/pdf pdf; \
+	cp -r $(CURRENTDIR)src/pdf pdf; \
 	cd pdf; \
-	pdflatex $(PKG_NAME)-LaTeX.tex; \
-	gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.5 -dNOPAUSE -dQUIET -dBATCH -dPrinted=false -sOutputFile=$(PKG_NAME)-pdf.pdf $(PKG_NAME)-LaTeX.pdf; \
+	sed "s/%footnote%/$$(cat footnote.tex)/" $(PKG_NAME)-LaTeX.tex > $(PKG_NAME)-LaTeX-new.tex; \
+	pdflatex $(PKG_NAME)-LaTeX-new.tex; \
+	gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.5 -dNOPAUSE -dQUIET -dBATCH -dPrinted=false -sOutputFile=$(PKG_NAME)-pdf.pdf $(PKG_NAME)-LaTeX-new.pdf; \
 	cd $(CURRENTDIR)build; \
 	echo "<!--" > part.pdf; \
 	cat pdf/$(PKG_NAME)-pdf.pdf >> part.pdf; \
 	echo "-->" >> part.pdf; \
 	cat $(CURRENTDIR)/src/html/$(PKG_NAME)-html.html >> part.pdf; \
-	echo "<!--\"\"\"" >> part.pdf; \
+	echo "<!--" >> part.pdf; \
+	echo "\"\"\"" >> part.pdf; \
 	cat $(CURRENTDIR)/src/python/$(PKG_NAME)-python.py >> part.pdf; \
 	echo "r\"\"\"" >> part.pdf; \
 	python3 $(CURRENTDIR)src/brainfu/bfcomment.py part.pdf part-commented.pdf; \
@@ -35,6 +37,17 @@ all:
 	echo "-->" >> final.pdf; \
 	echo "\"\"\"" >> final.pdf; \
 	cp final.pdf $(CURRENTDIR)bin/$(PKG_NAME).pdf; \
+	cd $(CURRENTDIR); \
+
+boring:
+	mkdir -p $(CURRENTDIR)bin; \
+	mkdir -p $(CURRENTDIR)build; \
+	cd $(CURRENTDIR)build; \
+	cp -r $(CURRENTDIR)src/pdf pdf; \
+	cd pdf; \
+	pdflatex $(PKG_NAME)-LaTeX.tex; \
+	gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.5 -dNOPAUSE -dQUIET -dBATCH -dPrinted=false -sOutputFile=$(PKG_NAME)-pdf.pdf $(PKG_NAME)-LaTeX.pdf; \
+	cp $(PKG_NAME)-pdf.pdf $(CURRENTDIR)bin/$(PKG_NAME)-boring.pdf; \
 	cd $(CURRENTDIR); \
 
 clean:

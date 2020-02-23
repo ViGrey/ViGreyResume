@@ -266,10 +266,10 @@ vigrey.com | vi@vigrey.com | github.com/ViGrey
   * 2018 - \x1b[1mConcealing ZIP Files in NES Cartridges\x1b[0m - Proof of Concept or GTFO Issue 0x18, 4, pp 17-21
 
 ----------------
-[1] This Python file is also a valid Brainfu-- file that prints this resume in ASCII
-[2] This Python file is also a Brainfu-- interpreter - \x1b[1mpython3 """ + script_name + " --bf " + script_name + """\x1b[0m
+[1] This Python file is also a valid Brainfu-- program that prints this resume in ASCII
+[2] This Python file is also a Brainfu-- interpreter (Works on Linux/macOS/*nix systems only) - \x1b[1mpython3 """ + script_name + " --bf " + script_name + """\x1b[0m
 [3] This Python file is also a valid PDF file version of this resume
-[4] This Python file is also a valid static HTML file version of this resume - Rename \x1b[1m""" + script_name + """\x1b[0m to \x1b[1mViGreyResume.pdf\x1b[0m and open it in a PDF viewer
+[4] This Python file is also a valid static HTML file version of this resume - Rename \x1b[1m""" + script_name + """\x1b[0m to \x1b[1mViGreyResume.html\x1b[0m and open it in a web browser
 [5] The source code for this resume can be found at https://github.com/ViGrey/ViGreyResume or by unzipping this file, which is also a valid ZIP file"""
 
 
@@ -279,4 +279,4 @@ if help_flag:
 elif bf_flag:
     interpret_bf()
 else:
-    print(resume_data.replace("\n", "\r\n"))
+    print(resume_data)

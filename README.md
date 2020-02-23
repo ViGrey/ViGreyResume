@@ -26,6 +26,14 @@ From a terminal, go to the the main directory of this project (the directory thi
 
 The resulting file will be located in at **bin/ViGreyResume.pdf**.
 
+### Build a Non-Polyglot File Version of ViGreyResume.pdf:
+
+From a terminal, go to the the main directory of this project (the directory this README.md file exists in), you can then build the file with the following command.
+
+    $ make boring
+
+The resulting file will be located in at **bin/ViGreyResume-boring.pdf**.
+
 ### Cleaning Build Environment:
 
 If you used `make` to build the polyglot, you can run the following command to clean up the build environment.
@@ -42,7 +50,7 @@ ViGreyResume.pdf is a valid static HTML file.  To see the HTML version of the fi
 
 ### Running ViGreyResume.pdf as a Python 2 File:
 
-ViGreyResume.pdf is a valid Python 2 file.  If you run this file using python2 without any options, it will print out an ASCII version of the resume text.
+ViGreyResume.pdf is a valid Python 2 file (Only for Linux/macOS/\*nix systems, not Windows).  If you run this file using python2 without any options, it will print out an ASCII version of the resume text.
 
     $ Usage: python2 ViGreyResume.pdf [ OPTIONS ] 
 
@@ -61,7 +69,7 @@ ViGreyResume.pdf is a valid Python 2 file.  If you run this file using python2 w
 
 ### Running ViGreyResume.pdf as a Python 3 File:
 
-ViGreyResume.pdf is a valid Python 3 file.  If you run this file using python3 without any options, it will print out an ASCII version of the resume text.
+ViGreyResume.pdf is a valid Python 3 file (Only for Linux/macOS/\*nix systems, not Windows).  If you run this file using python2 without any options, it will print out an ASCII version of the resume text.
 
     $ Usage: python3 ViGreyResume.pdf [ OPTIONS ] 
 
@@ -80,7 +88,7 @@ ViGreyResume.pdf is a valid Python 3 file.  If you run this file using python3 w
 
 ### Interpreting ViGreyResume.pdf as a Brainfu-- File:
 
-ViGreyResume.pdf is valid Brainfu-- program, but is also a functioning Brainfu-- program interpreter.  Interpreting ViGreyResume.pdf as a brainfu-- program will print out an ASCII version of the resume text.
+ViGreyResume.pdf is valid Brainfu-- program, but is also a functioning Brainfu-- program interpreter (Only on Linux/macOS/\*nix systems, not Windows).  Interpreting ViGreyResume.pdf as a brainfu-- program will print out an ASCII version of the resume text.
 
     $ python3 ViGreyResume.pdf --bf ViGreyResume.pdf
 
