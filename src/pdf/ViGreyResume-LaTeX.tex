@@ -1,0 +1,224 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Medium Length Professional CV
+% LaTeX Template
+% Version 2.0 (8/5/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Trey Hunner (http://www.treyhunner.com/)
+%
+% Important note:
+% This template requires the resume.cls file to be in the same directory as the
+% .tex file. The resume.cls file provides the resume style used for structuring the
+% document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass{resume} % Use the custom resume.cls style
+\sloppy
+
+\usepackage[utf8]{inputenc}
+
+\usepackage[T1]{fontenc}
+\usepackage[sfdefault]{AlegreyaSans}
+\renewcommand*\oldstylenums[1]{{\AlegreyaSansOsF #1}}
+
+\usepackage{texdate}
+
+\usepackage[letterpaper,margin=0.5in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage[none]{hyphenat}
+\usepackage{microtype}
+\usepackage{xcolor}
+
+\definecolor{mydarkgray}{gray}{0.13}
+
+\makeatletter
+\newcommand{\globalcolor}[1]{%
+  \color{#1}\global\let\default@color\current@color
+}
+\makeatother
+
+\AtBeginDocument{\globalcolor{mydarkgray}}
+
+
+
+\makeatletter
+\def\footnoterule{\kern-3\p@
+  \hrule \@width \textwidth \kern 2.6\p@}
+\makeatother
+
+
+\initcurrdate
+\name{Vi Grey}
+
+\address{\href{https://vigrey.com}{vigrey.com} \\
+\href{mailto:vi@vigrey.com}{vi@vigrey.com} \\
+\href{https://github.com/ViGrey}{github.com/ViGrey}}
+
+\begin{document}
+
+
+
+%----------------------------------------------------------------------------------------
+%	LANGUAGES AND TECHNOLOGIES SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rListSection}{Languages and Technologies}
+
+\item Go, Python, PHP, 6502 ASM, Z80 ASM, Bash, Javascript, HTML, CSS, JSON, XML, Brainfu-{}-
+
+\item Linux, Unix, Windows, CentOS, RHEL, AWS, Unix Permissions, Cron, AngularJS, Node.js, TCP/IP, HTTP, TLS, SSL, SQL, MongoDB, MySQL, \LaTeX
+
+\end{rListSection}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Work Experience}
+
+\begin{rSubsection}{Software Engineer, Technology Researcher, \& Speaker}{2014 - Present}{VG Interactive (Independent) --- Rochester, MN/New York, NY}{}
+\item Created a research lab to actively develop skills and knowledge in modern and historical technology
+\item Writes and speaks about technology, security, and information theory
+\end{rSubsection}
+
+\begin{rSubsection}{Conference Name Badge Developer}{(Contract) 2018-2019}{Midwest Gaming Classic --- Milwaukee, WI}{}
+\item Created first name badge for a gaming conference that is a playable game cartridge
+\item Developed new NES game "Bovinium Quest - Batteries Not Included" from scratch in 6502 Assembly
+\item Programmed, assembled, and soldered over 600 cartridges by hand
+\item Created score code system that lets players submit their high scores to an online leaderboard
+\end{rSubsection}
+
+\begin{rSubsection}{Software Engineer \& Information Security Engineer}{2015}{Excel Manufacturing --- St. Charles, MN}{}
+\item Developed sales and support ticket management application to improve sales and support team productivity
+\item Encrypted database information and hashed passwords with bcrypt to protect data in case of a data breach
+\item Set up AWS virtual servers to test application deployment before running those applications in production environments
+\end{rSubsection}
+
+\begin{rSubsection}{Web Developer}{(Contract) 2015}{Toymaker Television (Tymkrs) --- Rochester, MN}{}
+\item Created a website design for desktop with the security requirements of needing to be static and easily maintainable
+\item Optimized original website design to reduce loading times by more than 75\% and allow for dynamic content size
+\end{rSubsection}
+
+\begin{rSubsection}{Systems Administrator \& Web Developer}{2011-2013}{Jon Hassler Theater --- Plainview, MN}{}
+\item Created a web-based box office ticket reservation system to improve work productivity
+\item Developed and maintained website, increasing page traffic by over 800\%
+\item Managed computer systems and networks to keep business operations functioning
+\end{rSubsection}
+
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATIONS SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rListSection}{Presentations}
+
+\item \href{https://vigrey.com/presentations/2019-04-12-cyphercon.pdf}{\textbf{Bet You Never Played an NES Game like This: Innovating Under Limitations}} --- Cyphercon 4.0 -- Milwaukee, WI \hfill 2019
+\item \href{https://vigrey.com/presentations/2018-07-20-hope.pdf}{\textbf{I Dream of Game Genies and ZIP Files - Hacking the NES}} --- HOPE Conference -- Manhattan, NY \hfill 2018
+\item \href{https://vigrey.com/presentations/2017-10-20-defcon-201.pdf}{\textbf{Phishing for Root}} --- DEFCON 201 Technical Meeting -- Hoboken, NJ \hfill 2017
+\item \href{https://vigrey.com/zpresentations/2017-10-12-nyc-python.pdf}{\textbf{Fair Results From an Unfair Coin}} --- NYC Python Lightning Talks -- Manhattan, NY \hfill 2017
+\item \href{https://vigrey.com/presentations/2017-06-08-k-lug.pdf}{\textbf{Attacking Your Two-Factor Authentication}} --- K-LUG Technical Meeting -- Rochester, MN \hfill 2017
+\end{rListSection}
+
+
+\pagebreak
+
+%----------------------------------------------------------------------------------------
+%	PROJECTS SECTION
+%----------------------------------------------------------------------------------------
+ 
+\begin{rSection}{Projects}
+
+\begin{rSubsection}{\href{https://github.com/ViGrey/ViGreyResume}{This Resume}}{2020}{}{}
+\item See Footnotes
+	\footnote{This PDF is also a valid Python (2 \& 3) file that prints this resume in ASCII \ \ \ \ -- \ \ \ \ \texttt{python3 ViGreyResume.pdf -{}-help}}
+	\footnote{This PDF is also a valid Brainfu-{}- file that prints this resume in ASCII}
+	\footnote{This PDF is also a Brainfu-{}- program interpreter \ \ \ \ -- \ \ \ \ \texttt{python3 ViGreyResume.pdf -{}-bf ViGreyResume.pdf}}
+	\footnote{This PDF is also a valid static HTML file version of this resume  \ \ \ \ -- \ \ \ \  Rename \textbf{ViGreyResume.pdf} to \textbf{ViGreyResume.html} and open it in a web browser}
+	\footnote{The source code for this resume can be found at \texttt{\href{https://github.com/ViGrey/ViGreyResume}{https://github.com/ViGrey/ViGreyResume}} or by unzipping this file, which is also a valid ZIP file}
+\end{rSubsection}
+
+\begin{rSubsection}{\href{https://github.com/ViGrey/gb-nes-html-pdf-zip}{GB/NES/HTML/PDF/ZIP Polyglot File}}{2019}{}{}
+\item Gameboy ROM that is also a functioning NES ROM, HTML file, PDF file, and ZIP file that contains the file's full source code
+\end{rSubsection}
+
+\begin{rSubsection}{\href{https://github.com/ViGrey/brainfu}{Brainfu-{}- Programming Language Interpreter on NES Cartridge}}{2018}{}{}
+\item Interpreter for the Brainfu-{}- programming language that can be played on an NES using a standard NES controller
+\end{rSubsection}
+
+\begin{rSubsection}{\href{https://github.com/ViGrey/neszip-example}{NESZIP}}{2018}{}{}
+\item Proof of concept tool that makes an NES ROM that is also a ZIP file that contains a copy of its own source code
+\end{rSubsection}
+
+
+\begin{rSubsection}{\href{https://github.com/ViGrey/3f.py}{3F.py}}{2017}{}{}
+\item Python script that takes 2 different types of files and creates a file that is simultaneously a functioning version of both files
+\end{rSubsection}
+
+\begin{rSubsection}{\href{https://github.com/ViGrey/modem-tap}{Modem-Tap}}{2017}{}{}
+\item Middleware audio engine written in Go that emulates a network connection though a Bell103 dial-up modem
+\end{rSubsection}
+
+\begin{rSubsection}{Personal BBS}{2017}{}{}
+\item Online Bulletin Board Service written in Go --- \texttt{telnet vigrey.com}
+\end{rSubsection}
+
+
+\begin{rSubsection}{\href{https://gist.github.com/ViGrey/213cfd61668c08c09b76fdc30781ac64}{Root Phisher}}{2017}{}{}
+\item Proof of concept Bash script that pretends to be the sudo password prompt and deletes traces of itself
+\end{rSubsection}
+
+\begin{rSubsection}{\href{https://github.com/ViGrey/ignis}{ignis}}{2015}{}{}
+\item Scripting and templating engine written in Python for generating static websites
+\end{rSubsection}
+
+\begin{rSubsection}{\href{https://github.com/ViGrey/latchbox}{Latchbox}}{2014}{}{}
+\item Password manager written in Go that uses a console based user interface
+\end{rSubsection}
+
+\begin{rSubsection}{\href{https://github.com/ViGrey/rcube}{rcube}}{2013}{}{}
+\item Python module that solves scrambled Rubik's Cubes
+\end{rSubsection}
+
+\begin{rSubsection}{\href{https://github.com/ViGrey/datecalc}{datecalc}}{2012}{}{}
+\item Python module that can calculate the day of the week for any date (Ported to Go, Ruby, and Javascript)
+\end{rSubsection}
+
+
+\end{rSection}
+
+
+%----------------------------------------------------------------------------------------
+%	COMMUNITY WORKSHOP MEMBERSHIPS SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rListSection}{Community Workshop Memberships}
+
+\item \textbf{DEFCON 212} --- Makerspace -- New York, NY \hfill 2018 - Present
+
+\item \textbf{DEFCON 201} --- Makerspace -- Hoboken, NJ/Jersey City, NJ  \hfill 2017 - Present
+
+\item \textbf{The Rabbit Hole} (Operated by the Tymkrs) --- Makerspace -- Rochester, MN \hfill 2013 - Present
+
+\item \textbf{K-LUG} --- Linux User Group -- Rochester, MN \hfill 2016 - 2017
+
+\end{rListSection}
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rListSection}{Publications}
+
+\item \textbf{\href{https://www.alchemistowl.org/pocorgtfo/pocorgtfo18.pdf}{Concealing ZIP Files in NES Cartridges}} --- Proof of Concept or GTFO Issue 0x18, 4, pp 17-21  \hfill 2018
+
+\end{rListSection}
+
+
+\end{document}
